@@ -1,0 +1,82 @@
+uname -r                    => kernel version
+uname -m                    => architecture(64/86)
+ls                          => show current directory contents
+ls -a                       => show current directory contents(including hidden contents)
+pwd                         => show current directory path
+mkdir directory_name        => create directory name
+mkdir dir1 dir2 dir3        => create multiple directory
+cd                          => change directory
+touch file_name             => create file
+
+
+cat > file_name             => create if not exixt. if exist write in file replacing previous. CTRL-D when done
+cat file_name               => view contents of a file
+cat >> filename             => append some text with the existing text in the file
+cat file1.txt >> file2.txt  => append the contents of file1.txt to file2.txt
+cat file1 file2 >> file3    => concatenate multiple files
+cp source destination       => copy file/directory
+mv old_name new_name        => move or rename directories and files
+rm filename                 => remove files or directory
+rm *                        => delete all files
+rm –d dir_name              => empty directory / remove all in that directory
+mkdir dirname               => create a directory
+cd dirname (!! mv old_name new_name)    =>  change the name of the directory
+rmdir dirname               => remove directoriy
+rmdir -p dirname            => remove directoriy with its subdirectories
+
+
+uname –n                    => machine name in network
+uname –r                    => version number of OS
+cal                         => display calendar
+cal -3                      => display the previous, current and next month
+cal –M                      => current month starting from Monday
+date                        => display system date
+date +%m                    => display month only
+date +%h%m                  => display month name and month
+date +%h                    => display month name
+date+%H                     => display the time in hours  
+date+%M                     => display the time in minutes
+date+%r                     => display the time in AM or PM
+date+%d                     => display date of month
+who                         => display the login details
+whoami                      => display the login user details
+logname                     => display login id
+history                     => all the commands used in the past for the current terminal session
+clear                       => clear terminal
+bc                          => calculate values     // bc (enter) 1+2
+
+
+man COMMAND                 => shows manual pages of the command
+COMMAND --help              => shows help for the command
+wc filename                 => show number of lines, words and bytes
+wc –c filename              => display the number of characters in a file
+wc –l filename              => display the number of lines
+nl filename                 => display number of lines with numbers
+nl –i5 filename             => increment the line number by 5
+sort filename               => sort the content of file
+sort –r filename            => reverse and sort the content of file
+sort –u filename            => sort and remove the duplicate
+**sort -k n.m filename        => sort by the "n" field, starting with the "m" character in that field.
+head filename               => display first 10 lines
+tail filename               => display last 10 lines
+head -6c filename           => display first 6 characters
+head -5 file1 file2         => display 5 lines from 2 files
+cut -b filename             => display the first 10 characters of each line
+cut -c 1-8 filename         => display the first 8 characters of each line
+cut -d, -f 1,3 cutfile.txt  => display the first and third fields of each line; delimiter is a comma
+paste file1.txt file2.txt   => merge the contents of two files
+
+
+grep -i “UNix" sample.txt   => search for the word “Unix” in the file sample.txt
+grep -c "unix" sample.txt   => count the number of lines containing the word “Unix” in the file sample.txt
+grep -o "unix" sample.txt   => display only the matching part of the line
+grep -v "unix" sample.txt   => display all lines except the matching lines
+chmod 664 file.txt          => change the permission of file.txt to 664 //UGO
+    0: (000) No permission.
+    1: (001) Execute permission.
+    2: (010) Write permission.
+    3: (011) Write and execute permissions.
+    4: (100) Read permission.
+    5: (101) Read and execute permissions.
+    6: (110) Read and write permissions.
+    7: (111) Read, write, and execute permissions.
